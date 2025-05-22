@@ -14,7 +14,11 @@
 \usepackage{tabularx} % for making tables with fixed width columns
 \usepackage{array} % tabularx requires this
 \usepackage[dvipsnames]{xcolor} % for coloring text
-\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+% Define a modern, professional color palette for CV
+% Modern, vibrant green color palette for CV
+% Improved color palette for readability and professionalism
+\definecolor{primaryColor}{HTML}{11624F}   % Deeper teal (main accent, more vibrant)
+
 \usepackage{enumitem} % for customizing lists
 \usepackage{fontawesome5} % for using icons
 \usepackage{amsmath} % for math
@@ -150,7 +154,7 @@
         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in May 2025}\hspace{\widthof{Last updated in May 2025}}
+        \small\color{gray}\textit{Last updated on \today}\hspace{\widthof{Last updated on \today}}
     }}}%
   }%
 }%
@@ -163,20 +167,20 @@
 
 
 \begin{document}
-    \newcommand{\AND}{\unskip
-        \cleaders\copy\ANDbox\hskip\wd\ANDbox
-        \ignorespaces
-    }
-    \newsavebox\ANDbox
-    \sbox\ANDbox{}
+\newcommand{\AND}{\unskip
+    \cleaders\copy\ANDbox\hskip\wd\ANDbox
+    \ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{}
 
-    \placelastupdatedtext
+%\placelastupdatedtext
     \begin{header}
         \fontsize{30 pt}{30 pt}
         \textbf{Filip Pagliaro}
-
+    
         \vspace{0.3 cm}
-
+    
         \normalsize
         \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Stockholm}%
         \kern 0.25 cm%
@@ -192,116 +196,83 @@
         \kern 0.25 cm%
         \mbox{\hrefWithoutArrow{https://github.com/FilPag}{{\footnotesize\faGithub}\hspace*{0.13cm}FilPag}}%
     \end{header}
-
+    
     \vspace{0.3 cm - 0.3 cm}
-
-
+    
     \section{Professional Summary}
     
-        \begin{onecolentry}
-           Software engineer with enterprise full-stack experience in TypeScript and React. Most recently designed and implemented an internal API Management platform that streamlined integration processes across teams. Also enjoys experimenting with Generative AI and building video games on the side.
-        \end{onecolentry}
-
-\section{Experience}
-        \begin{twocolentry}{
-            Stockholm, Sweden
-
-        Aug 2023 – Present
+    \begin{onecolentry}
+        Software engineer experienced in building robust, scalable solutions across the full stack, with a focus on cloud-native platforms and developer tooling. Enjoys playing around with Generative AI, and creative side projects such as game development in spare time.
+    \end{onecolentry}
+    
+    \section{Experience}
+    \begin{twocolentry}{
+            Aug 2023 – Present
         }
-            \textbf{Accenture Sweden}, Software Engineer
-            \begin{highlights}
-                \item Designed and implemented internal API management platform for client, including developer tooling, CI/CD pipelines, and platform services.
-                
-                (\textbf{Azure}, \textbf{Github Actions}, \textbf{Powershell}, \textbf{TypeScript}, \textbf{.Net})
-                
-                \item Designed and implemented new features for mobile app, backend, and web platform. 
-                
-                (\textbf{TypeScript}, \textbf{React-Native}, \textbf{Node.js}, \textbf{Firebase})
-                
-                \item Implementation and maintenance of new features for client’s e-commerce platform.
-                
-                (\textbf{Typescript}, \textbf{React}, \textbf{Jest}, \textbf{Git}, \textbf{Azure DevOps})
-                
-            \end{highlights}
-        \end{twocolentry}
-
-
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-            Uppsala, Sweden
-
-        Nov 2019 – Feb 2020
+        \textbf{Accenture Sweden}, Software Engineer
+    \end{twocolentry}
+    \begin{highlights}
+        \item Designed and implemented an internal API management platform for a client, including developer tooling, CI/CD pipelines, and platform services. \\
+            \small{\textit{Technologies: Azure, GitHub Actions, PowerShell, TypeScript, .NET/ASP.NET}}
+        \item Developed and delivered new features for a mobile app targeting internal sports activities, with main responsibility for notifications. \\
+            \small{\textit{Technologies: TypeScript, React, React Native, Node.js, Firebase}}
+        \item Implemented and maintained features for a client’s e-commerce platform, focusing on performance and reliability. \\
+            \small{\textit{Technologies: TypeScript, React, Jest, Azure DevOps}}
+    \end{highlights}
+    
+    \vspace{0.2 cm}
+    
+    \begin{twocolentry}{
+            Nov 2019 – Feb 2020
         }
-            \textbf{Uppsala University}, Teaching Assistant – Haskell
-            \begin{highlights}
-                \item Helped students understand Haskell and programming concepts
-                \item Ran lab sessions and supported students one-on-one with debugging and problem-solving
-            \end{highlights}
-        \end{twocolentry}
-        
+        \textbf{Uppsala University}, Teaching Assistant – Haskell
+    \end{twocolentry}
+        \begin{highlights}
+            \item Assisted students understand Haskell and programming concepts
+            \item Ran lab sessions and supported students one-on-one with debugging and problem-solving
+        \end{highlights}
+    
     \section{Education}
-
-
-       \begin{threecolentry}{\textbf{MSc}}{
+    
+    
+    \begin{threecolentry}{\textbf{MSc}}{
             Uppsala, Sweden
-       
-            Sept 2018 – Jun 2023
-        }
-            \textbf{Uppsala University}, Computer and Information Engineering
-            \begin{highlights}
-                \item Master's thesis on \href{https://uu.diva-portal.org/smash/record.jsf?pid=diva2\%3A1767669&dswid=-8871}{Multi-agent Reinforcement Learning}
-                \item Bachelor's thesis on \href{https://uu.diva-portal.org/smash/record.jsf?pid=diva2:1567315}{Image Classification using CNNs}
-            \end{highlights}
-        \end{threecolentry}
-
-        \begin{threecolentry}{\textbf{}}{
+    
+            Sept 2018 – Jun 2023}
+        \textbf{Uppsala University}, Computer and Information Engineering
+        \begin{highlights}
+            \item Master's thesis on \href{https://uu.diva-portal.org/smash/record.jsf?pid=diva2\%3A1767669&dswid=-8871}{Multi-agent Reinforcement Learning}
+            \item Bachelor's thesis on \href{https://uu.diva-portal.org/smash/record.jsf?pid=diva2:1567315}{Image Classification using CNNs}
+        \end{highlights}
+    \end{threecolentry}
+    
+    \begin{threecolentry}{\textbf{}}{
             Milan, Italy
-       
+    
             Sept 2022 – Jan 2023
         }
-            \textbf{Politecnico di Milano}, Computer Engineering
-            \begin{highlights}
-             \item Exchange Semester
-            \end{highlights}
-        \end{threecolentry}
-
+        \textbf{Politecnico di Milano}, Computer Engineering
+        \begin{highlights}
+            \item Exchange Semester
+        \end{highlights}
+    \end{threecolentry}
     
+    \section{Skills}
+    \begin{onecolentry}
+        \renewcommand{\arraystretch}{1.25} % Increase row spacing
+        \begin{tabularx}{\textwidth}{@{}lX@{}}
+            \textbf{Languages}        & TypeScript, JavaScript, Python, Java, C/C++, C\#, PowerShell, Haskell \\
+            \textbf{Frameworks/Tools} & Node.js, React, React Native, Next.js, .NET, Jest                     \\
+            \textbf{DevOps/Cloud}     & Azure, Docker, Kubernetes, Firebase, GitHub Actions                   \\
+            \textbf{Machine Learning} & TensorFlow, PyTorch, Pandas, NumPy, Gen AI APIs (OpenAI, Ollama)      \\
+        \end{tabularx}
+        \renewcommand{\arraystretch}{1} % Reset to default
+    \end{onecolentry}
     
-    \section{Technical Skills}
-
-        \begin{onecolentry}
-            \textbf{Languages:} TypeScript, JavaScript, Python, Java, C/C++, C\#, PowerShell, Haskell
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-        
-        \begin{onecolentry}
-            \textbf{Frameworks \& Tools:} Node.js, React, .NET
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{onecolentry}
-            \textbf{DevOps \& Cloud:} Docker, Azure, Firebase, GitHub Actions
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{onecolentry}
-            \textbf{Machine Learning:} TensorFlow, PyTorch, Scikit-learn, Keras, Pandas, NumPy, OpenCV, Hugging Face Transformers, Gen AI APIs (OpenAI, Ollama)
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{onecolentry}
-            \textbf{Collaboration \& Professional Skills:} Effective communication, Cross-functional teamwork, Agile collaboration, Technical problem-solving, Code reviews \& mentoring
-        \end{onecolentry}
-
-\section{Languages}
+    \section{Languages}
     \begin{tabular}{@{}ll}
-        \textbf{Swedish} & Native \\
-        \textbf{English} & Fluent \\
+        \textbf{Swedish} & Native       \\
+        \textbf{English} & Fluent       \\
         \textbf{Italian} & Intermediate \\
     \end{tabular}
-\end{document}
+    \end{document}
